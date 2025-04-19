@@ -1,0 +1,2 @@
+# ideapagina
+son como niños
