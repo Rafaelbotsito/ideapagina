@@ -8,14 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
     <section class="header">
         <nav>
-            <a href="index.html"><img src="resources/logoidea15.png" alt="logo" class="logo"></a>
-            <div class="nav-links">
+            <a href="index.html"><img src="resources/logoidea18.png" alt="logo" class="logo"></a>
+            <div class="nav-links" id="navlinks">
+              <i class="fa fa-chevron-left" onclick="hidemenu()"></i>
                 <ul>
-                  <li><a href="inscripcion">INSCRIPCION</a></li>
+                  <li><a href="inscripcion">INSCRIPCIÓN</a></li>
                   <li><a href="horarios">HORARIOS</a></li>
                   <li><a href="quienes-somos">NOSOTROS</a></li>
                   <li><a href="solicitudes">SOLICITUDES</a></li>
@@ -23,8 +26,33 @@
                   <li><a href="informacion institucional">INFORMACION</a></li>
                 </ul>
             </div>
+          <i class="fa fa-bars" onclick="showmenu()"></i>
         </nav>
-    
+      <div class="bienvenida">
+        <H1>BIENVENIDOS AL IDEA</H1>
+        <p>En nuestra institución, donde la excelencia académica se une al desarrollo integral <br> ofrecemos un entorno inspirador para estudiantes desde educación inicial hasta media general.</p>
+        <a href="informacion institucional" class="boton-principal">PROYECTO IDEA</a>
+      </div>   
     </section>
-</body>
+       
+    <!----javascript moniqueado para que el hover de moviles funcione. 
+    combrobarlo en inspeccionar pagina con open live server. fk u js c++god-->
+    <script>
+      var navlinks=document.getElementById("navlinks");
+      
+      function showmenu(){
+        navlinks.style.right="0";
+      }
+      function hidemenu(){
+        navlinks.style.right="-200px";
+      }
+
+      /*if(onclick=hidemenu){
+        navlinks.style.right=-200;
+      }else if(onclick=showmenu){
+        navlinks.style.right=0;
+      }*/
+    </script>
+
+  </body>
 </html>

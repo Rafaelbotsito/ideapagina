@@ -44,14 +44,105 @@ nav img{
 
 .nav-links ul li::after{
     content: "";
-    width: 100%;
+    width: 0%;
     height: 2px;
-    background: #c28400 ;
+    background: #ffae00 ; /*si quieres cambiar el color de la linea de los subtitulos*/
     display: block;
     margin: auto;
+    transition: 0.30s;
 }
 
+.nav-links ul li:hover::after{
+    width: 100%;
+}
 
+.bienvenida{
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
+.bienvenida h1{
+    font-size: 60px;
+   
+}
 
+.bienvenida p{
+    margin: 10px 0 40px;
+    font-size: 18px;
+    color: #fff;
+}
+
+/*.bienvenida h1::after{
+    content: "";
+    width: 60%;
+    height: 3.5px;
+    background: #ffc400 ; */ /*color de la linea del h1
+    display: block;
+    margin: auto
+}*/
+
+.boton-principal{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 20px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.boton-principal:hover{
+    border: 1px solid #ffffff;
+    background: rgb(255, 187, 0);
+    transition: 0.5s;
+}
+
+nav .fa{
+    display:none
+}
+
+@media(max-width: 700px){
+    .bienvenida h1{
+        font-size:30px
+    }
+    .nav-links ul li{
+        display: block;
+        font-size: 10px;
+    }
+    .nav-links{
+        position: absolute;
+        background: #102c85f5;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa{
+        display: block;
+        color:#fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
     
+    .showmenu::after{
+        transition: 0.5s;
+    }
+    .nav-links ul li::after{
+        height: 0px;
+    }
+}
